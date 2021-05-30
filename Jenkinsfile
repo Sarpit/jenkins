@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                    sudo ./jenkins/build/mvn.sh mvn -B -DskipTests clean package
-                    sudo ./jenkins/build/build.sh 
+                    ./jenkins/build/mvn.sh mvn -B -DskipTests clean package
+                    ./jenkins/build/build.sh 
                    '''
             }
         }
